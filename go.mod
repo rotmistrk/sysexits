@@ -1,3 +1,3 @@
-module github.org/rotmistrk/sysexits
+module github.com/rotmistrk/sysexits
 
 go 1.21
