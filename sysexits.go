@@ -8,6 +8,7 @@ import (
 type SysExit int
 
 const (
+	ExOk           SysExit = 0
 	ExUsage        SysExit = 64
 	ExDataErr      SysExit = 65
 	ExNoInput      SysExit = 66
@@ -55,6 +56,8 @@ func (se SysExit) Do() {
 
 func (se SysExit) Error() string {
 	switch se {
+	case ExOk:
+		return "ok"
 	case ExUsage:
 		return "command line usage error"
 	case ExDataErr:
